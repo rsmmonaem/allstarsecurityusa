@@ -59,6 +59,23 @@
                     </ul>
                 </li>
 
+                <li class="sidebar-item">
+                    <a data-bs-target="#pageManagement" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Pages Management</span>
+                    </a>
+                    <ul id="pageManagement" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a class='sidebar-link' href='{{ route('page-categories.index') }}'>Page Categories</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class='sidebar-link' href='{{ route('pages.index') }}'>Pages</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class='sidebar-link' href='{{ route('seo-pages.index') }}'>SEO Pages</a>
+                        </li>
+                    </ul>
+                </li>
+
             @endif
 
             @if($role == 'user')

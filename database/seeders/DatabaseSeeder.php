@@ -4,9 +4,13 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Database\Seeders\PageSeeder;
+use Database\Seeders\SeoPageSeeder;
 use Database\Seeders\CustomerSeeder;
 use Database\Seeders\RoleTableSeeder;
 use Database\Seeders\UserTableSeeder;
+use Database\Seeders\PageCategorySeeder;
+use Database\Seeders\PageAdditionalInfoSeeder;
 
 
 class DatabaseSeeder extends Seeder
@@ -21,6 +25,10 @@ class DatabaseSeeder extends Seeder
             RoleTableSeeder::class,
             UserTableSeeder::class,
             CustomerSeeder::class,
+            PageCategorySeeder::class,
+            PageSeeder::class,
+            SeoPageSeeder::class,
+            PageAdditionalInfoSeeder::class,
         ]);
     }
 }

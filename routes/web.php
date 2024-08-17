@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
@@ -8,7 +9,10 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\SuperAdminController;
-use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\SuperAdmin\PageController;
+use App\Http\Controllers\SuperAdmin\SeoPageController;
+use App\Http\Controllers\SuperAdmin\PageCategoryController;
+use App\Http\Controllers\SuperAdmin\PageAdditionalInfoController;
 
 Route::get('/link', function () {
     try {
@@ -38,7 +42,17 @@ Route::group(['middleware' => ['role:super-admin']], function () {
     Route::get('admin/all-customers', [UserController::class, 'customers'])->name('admin.customers.index');
     Route::get('admin/all-agents', [UserController::class, 'agents'])->name('admin.agents.index');
     Route::get('admin/all-users', [UserController::class, 'all_users'])->name('admin.users.index');
+        Route::prefix('super-admin')->group(function () {
+        Route::resource('page-categories', PageCategoryController::class);
+        Route::resource('pages', PageController::class);
+        Route::resource('seo-pages', PageAdditionalInfoController::class);
+        Route::resource('page-additional-info', PageAdditionalInfoController::class);
+        
+        
+    });
 });
+
+
 
 // Admin Routes
 Route::group(['middleware' => ['role:admin']], function () {
