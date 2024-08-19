@@ -42,7 +42,7 @@
                     Main
                 </li>
 
-                <li class="sidebar-item">
+                {{-- <li class="sidebar-item">
                     <a data-bs-target="#user" data-bs-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">User</span>
                     </a>
@@ -57,24 +57,46 @@
                             <a class='sidebar-link' href='{{ route('admin.agents.index') }}'>Agent's</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li class="sidebar-item">
+                {{-- <li class="sidebar-item">
                     <a data-bs-target="#pageManagement" data-bs-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Pages Management</span>
                     </a>
-                    <ul id="pageManagement" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <ul id="pageManagement" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar"> --}}
                         <li class="sidebar-item">
-                            <a class='sidebar-link' href='{{ route('page-categories.index') }}'>Page Categories</a>
+                            <a class="sidebar-link" href="{{ route('pages.index') }}">
+                                <span class="align-middle">Pages</span>
+                            </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class='sidebar-link' href='{{ route('pages.index') }}'>Pages</a>
+                            <a class="sidebar-link" href="{{ route('page-categories.index') }}">
+                                <span class="align-middle">Page Categories</span>
+                            </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class='sidebar-link' href='{{ route('seo-pages.index') }}'>SEO Pages</a>
+                            <a class="sidebar-link" href="{{ route('seo-pages.index') }}">
+                                <span class="align-middle">SEO Pages</span>
+                            </a>
                         </li>
-                    </ul>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('media.index') }}">
+                                <span class="align-middle">Media</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('header-menus.index') }}">
+                                <span class="align-middle">Header Menus</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('page-additional-info.index') }}">
+                                <span class="align-middle">Page Content</span>
+                            </a>
+                        </li>
+                    {{-- </ul>
                 </li>
+                 --}}
 
             @endif
 

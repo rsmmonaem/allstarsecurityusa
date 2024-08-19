@@ -17,34 +17,19 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="key_type">Key Type</label>
+                <input type="text" name="key_type" id="key_type" class="form-control" required>
+            </div>
+            <div class="form-group">
                 <label for="key">Key</label>
-                <select name="key" id="key" class="form-control" required>
-                    <option value="text">Text</option>
-                    <option value="image">Image</option>
-                </select>
+                <input type="text" name="key" id="key" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="value">Value</label>
-                <textarea name="value" id="value" class="form-control" placeholder="Enter text or leave this empty for image upload." required></textarea>
-                <small class="form-text text-muted">If you select 'Image' for the key, use the upload field below.</small>
-            </div>
-            <div class="form-group" id="image-field" style="display: none;">
-                <label for="image">Image (Optional)</label>
-                <input type="file" name="image" id="image" class="form-control-file">
+                <input type="text" name="value" id="value" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
     </div>
 </main>
-
-<script>
-    document.getElementById('key').addEventListener('change', function() {
-        var imageField = document.getElementById('image-field');
-        if (this.value === 'image') {
-            imageField.style.display = 'block';
-        } else {
-            imageField.style.display = 'none';
-        }
-    });
-</script>
 @endsection

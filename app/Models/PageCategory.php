@@ -2,13 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Page;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class PageCategory extends Model
 {
-    use HasFactory;
-
     protected $fillable = ['name', 'slug', 'image'];
 
     public function pages()

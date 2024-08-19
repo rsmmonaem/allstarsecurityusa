@@ -6,7 +6,7 @@
 <main class="content">
     <div class="container-fluid p-0">
         <h3>Edit Additional Info</h3>
-        <form action="{{ route('page-additional-info.update', $pageAdditionalInfo) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('page-additional-info.update', $pageAdditionalInfo->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="form-group">
@@ -20,41 +20,20 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="key_type">Key Type</label>
+                <input type="text" name="key_type" id="key_type" class="form-control" value="{{ $pageAdditionalInfo->key_type }}" required>
+            </div>
+            <div class="form-group">
                 <label for="key">Key</label>
-                <select name="key" id="key" class="form-control" required>
-                    <option value="text" {{ $pageAdditionalInfo->key === 'text' ? 'selected' : '' }}>Text</option>
-                    <option value="image" {{ $pageAdditionalInfo->key === 'image' ? 'selected' : '' }}>Image</option>
-                </select>
+                <input type="text" name="key" id="key" class="form-control" value="{{ $pageAdditionalInfo->key }}" required>
             </div>
             <div class="form-group">
                 <label for="value">Value</label>
-                <textarea name="value" id="value" class="form-control" required>{{ $pageAdditionalInfo->value }}</textarea>
-                <small class="form-text text-muted">If you select 'Image' for the key, use the upload field below.</small>
+                <input type="text" name="value" id="value" class="form-control" value="{{ $pageAdditionalInfo->value }}" required>
             </div>
-            @if($pageAdditionalInfo->key === 'image')
-                <div class="form-group">
-                    <label for="current_image">Current Image</label>
-                    <br>
-                    <img src="{{ asset('storage/' . $pageAdditionalInfo->value) }}" alt="Current Image" width="100">
-                </div>
-            @endif
-            <div class="form-group" id="image-field" style="{{ $pageAdditionalInfo->key === 'image' ? 'display: block;' : 'display: none;' }}">
-                <label for="image">Image (Optional)</label>
-                <input type="file" name="image" id="image" class="form-control-file">
-            </div>
+            <br>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
 </main>
-
-<script>
-    document.getElementById('key').addEventListener('change', function() {
-        var imageField = document.getElementById('image-field');
-        if (this.value === 'image') {
-            imageField.style.display = 'block';
-        } else {
-            imageField.style.display = 'none';
-        }
-    });
-</script>
 @endsection

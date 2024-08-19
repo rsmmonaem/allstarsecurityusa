@@ -14,7 +14,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col mt-0">
-                                    <h5 class="card-title">Income</h5>
+                                    <h5 class="card-title">Pages</h5>
                                 </div>
                                 <div class="col-auto">
                                     <div class="stat text-primary">

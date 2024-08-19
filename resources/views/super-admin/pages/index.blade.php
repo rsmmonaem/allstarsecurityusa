@@ -1,56 +1,47 @@
 @extends('layout.app')
 
-@section('title', 'Pages')
+@section('title', 'Page List')
 
 @section('content')
 <main class="content">
     <div class="container-fluid p-0">
-        <div class="mb-3">
-            <h3>Pages</h3>
-            <a href="{{ route('pages.create') }}" class="btn btn-primary mb-3">Add New</a>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Pages List</h5>
-                    </div>
-                    <div class="card-body">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Slug</th>
-                                    <th>Category</th>
-                                    <th>Additional Info</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($pages as $page)
-                                <tr>
-                                    <td>{{ $page->id }}</td>
-                                    <td>{{ $page->name }}</td>
-                                    <td>{{ $page->slug }}</td>
-                                    <td>{{ $page->page_category }}</td>
-                                    <td>{{ $page->page_additional_info }}</td>
-                                    <td>
-                                        <a href="{{ route('pages.edit', $page->id) }}" class="btn btn-warning">Edit</a>
-                                        <form action="{{ route('pages.destroy', $page->id) }}" method="POST" style="display:inline;">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">Delete</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h3>Page List</h3>
+        <a href="{{ route('pages.create') }}" class="btn btn-primary mb-3">Create New Page</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Slug</th>
+                    <th>SEO ID</th>
+                    <th>Category</th>
+                    <th>Parent Category</th>
+                    <th>Child Page</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($pages as $page)
+                    <tr>
+                        <td>{{ $page->id }}</td>
+                        <td>{{ $page->name }}</td>
+                        <td>{{ $page->slug }}</td>
+                        <td>{{ $page->seo_id }}</td>
+                        <td>{{ $page->page_category_id ? $page->page_category_id : 'N/A' }}</td>
+                        <td>{{ $page->parent_category_id ? $page->parent_category_id : 'N/A' }}</td>
+                        <td>{{ $page->child_page_id ? $page->child_page_id : 'N/A' }}</td>
+                        <td>
+                            <a href="{{ route('pages.edit', $page->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                            <form action="{{ route('pages.destroy', $page->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
 </main>
 @endsection

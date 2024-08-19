@@ -27,3 +27,6 @@
 	</style>
 	<!-- END SETTINGS -->
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="{{ asset('summernote/summernote-bs4.css')}}" rel="stylesheet">
+<script src="{{ asset('summernote/summernote-bs4.js')}}"></script>

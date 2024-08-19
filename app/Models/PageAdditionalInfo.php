@@ -8,12 +8,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class PageAdditionalInfo extends Model
 {
-    use HasFactory;
-
-    protected $fillable = ['page_id', 'key', 'value'];
+    protected $fillable = ['page_id', 'key_type', 'key', 'value'];
 
     public function page()
     {
         return $this->belongsTo(Page::class);
     }
 }
+

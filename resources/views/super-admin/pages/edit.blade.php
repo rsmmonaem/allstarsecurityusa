@@ -5,46 +5,57 @@
 @section('content')
 <main class="content">
     <div class="container-fluid p-0">
-        <div class="mb-3">
-            <h3>Edit Page</h3>
-            <a href="{{ route('pages.index') }}" class="btn btn-secondary mb-3">Back to List</a>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Edit Page</h5>
-                    </div>
-                    <div class="card-body">
-                        <form action="{{ route('pages.update', $page->id) }}" method="POST">
-                            @csrf
-                            @method('PUT')
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" value="{{ $page->name }}" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="slug" class="form-label">Slug</label>
-                                <input type="text" class="form-control" id="slug" name="slug" value="{{ $page->slug }}" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="page_category" class="form-label">Category</label>
-                                <select class="form-control" id="page_category" name="page_category" required>
-                                    @foreach ($pageCategories as $pageCategory)
-                                    <option value="{{ $pageCategory->slug }}" {{ $page->page_category == $pageCategory->slug ? 'selected' : '' }}>{{ $pageCategory->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="page_additional_info" class="form-label">Additional Info</label>
-                                <textarea class="form-control" id="page_additional_info" name="page_additional_info" required>{{ $page->page_additional_info }}</textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Update</button>
-                        </form>
-                    </div>
-                </div>
+        <h3>Edit Page</h3>
+        <form action="{{ route('pages.update', $page->id) }}" method="POST">
+            @csrf
+            @method('PUT')
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" value="{{ $page->name }}" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="slug">Slug</label>
+                <input type="text" name="slug" id="slug" class="form-control" value="{{ $page->slug }}" required>
+            </div>
+            <div class="form-group">
+                <label for="seo_id">SEO ID</label>
+                <input type="text" name="seo_id" id="seo_id" class="form-control" value="{{ $page->seo_id }}">
+            </div>
+            <div class="form-group">
+                <label for="page_category_id">Category</label>
+                <select name="page_category_id" id="page_category_id" class="form-control">
+                    <option value="">None</option>
+                    @foreach ($pageCategories as $category)
+                        <option value="{{ $category->id }}" {{ $category->id == $page->page_category_id ? 'selected' : '' }}>
+                            {{ $category->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="parent_category_id">Parent Category</label>
+                <select name="parent_category_id" id="parent_category_id" class="form-control">
+                    <option value="">None</option>
+                    @foreach ($pageCategories as $category)
+                        <option value="{{ $category->id }}" {{ $category->id == $page->parent_category_id ? 'selected' : '' }}>
+                            {{ $category->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="child_page_id">Child Page</label>
+                <select name="child_page_id" id="child_page_id" class="form-control">
+                    <option value="">None</option>
+                    @foreach ($pages as $p)
+                        <option value="{{ $p->id }}" {{ $p->id == $page->child_page_id ? 'selected' : '' }}>
+                            {{ $p->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
     </div>
 </main>
 @endsection

@@ -25,10 +25,10 @@ class DatabaseSeeder extends Seeder
             RoleTableSeeder::class,
             UserTableSeeder::class,
             CustomerSeeder::class,
-            PageCategorySeeder::class,
-            PageSeeder::class,
-            SeoPageSeeder::class,
-            PageAdditionalInfoSeeder::class,
+            // PageCategorySeeder::class,
+            // PageSeeder::class,
+            // SeoPageSeeder::class,
+            // PageAdditionalInfoSeeder::class,
         ]);
     }
 }

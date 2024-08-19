@@ -8,12 +8,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class SeoPage extends Model
 {
-    use HasFactory;
-
-    protected $fillable = ['slug', 'title', 'description', 'keywords'];
+    protected $fillable = ['title', 'description', 'keywords'];
 
     public function page()
     {
-        return $this->belongsTo(Page::class, 'slug', 'slug');
+        return $this->belongsTo(Page::class);
     }
 }
+

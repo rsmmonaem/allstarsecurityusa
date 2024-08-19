@@ -6,13 +6,19 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
-use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\HeaderMenuController;
 use App\Http\Controllers\SuperAdminController;
-use App\Http\Controllers\SuperAdmin\PageController;
-use App\Http\Controllers\SuperAdmin\SeoPageController;
-use App\Http\Controllers\SuperAdmin\PageCategoryController;
-use App\Http\Controllers\SuperAdmin\PageAdditionalInfoController;
+use App\Http\Controllers\PageCategoryController;
+// use App\Http\Controllers\SuperAdmin\PageController;
+use App\Http\Controllers\PageAdditionalInfoController;
+// use App\Http\Controllers\SuperAdmin\SeoPageController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\SeoPageController;
+use App\Http\Controllers\MediaController;
+
+
+
 
 Route::get('/link', function () {
     try {
@@ -25,7 +31,6 @@ Route::get('/link', function () {
 
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
-
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginProcess'])->name('loginProcess');
@@ -42,14 +47,6 @@ Route::group(['middleware' => ['role:super-admin']], function () {
     Route::get('admin/all-customers', [UserController::class, 'customers'])->name('admin.customers.index');
     Route::get('admin/all-agents', [UserController::class, 'agents'])->name('admin.agents.index');
     Route::get('admin/all-users', [UserController::class, 'all_users'])->name('admin.users.index');
-        Route::prefix('super-admin')->group(function () {
-        Route::resource('page-categories', PageCategoryController::class);
-        Route::resource('pages', PageController::class);
-        Route::resource('seo-pages', PageAdditionalInfoController::class);
-        Route::resource('page-additional-info', PageAdditionalInfoController::class);
-        
-        
-    });
 });
 
 
@@ -68,3 +65,12 @@ Route::group(['middleware' => ['role:agent']], function () {
 Route::group(['middleware' => ['role:user']], function () {
     Route::get('/user', [UserController::class, 'index'])->name('user');
 });
+
+
+Route::resource('pages', PageController::class);
+Route::resource('page-additional-info', PageAdditionalInfoController::class);
+
+Route::resource('seo-pages', SeoPageController::class);
+Route::resource('header-menus', HeaderMenuController::class);
+Route::resource('media', MediaController::class);
+Route::resource('page-categories', PageCategoryController::class);
