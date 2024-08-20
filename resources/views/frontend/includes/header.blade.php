@@ -88,13 +88,20 @@
 				<!-- Dark mode option END -->
 
 				<!-- Sign up button -->
-				<li class="nav-item me-2">
-					<a href="sign-up.html" class="btn btn-sm btn-light mb-0"><i class="bi bi-person-circle me-1"></i>Sign up</a>
-				</li>
-				<!-- Buy now button -->
-				<li class="nav-item d-none d-sm-block">
-					<button class="btn btn-sm btn-primary mb-0">Buy now!</button>
-				</li>
+
+				@if(auth()->check())
+					<li class="nav-item me-2"></li>
+						<a href="{{ route('logout') }}" class="btn btn-sm btn-light mb-0"><i class="bi bi-box-arrow-in-right me-1"></i>Logout</a>
+					</li>
+					<li class="nav-item d-none d-sm-block">
+						<a href="{{ route('super-admin') }}" class="btn btn-sm btn-light mb-0"><i class="bi bi-person-circle me-1"></i>Dashboard</a>
+					</li>
+					@else
+					<li class="nav-item me-2">
+						<a href="{{ route('login') }}" class="btn btn-sm btn-light mb-0"><i class="bi bi-person-circle me-1"></i>Sign in</a>
+					</li>
+				@endif
+
 				<!-- Responsive navbar toggler -->
 				<li class="nav-item">
 					<button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
