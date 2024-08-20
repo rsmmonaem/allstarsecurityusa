@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
 use App\Models\Product;
-use App\Models\Category;
+use App\Models\SeoPage;
 
+use App\Models\Category;
+use App\Models\PageCategory;
 use Illuminate\Http\Request;
 use App\Models\PageAdditionalInfo;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 
 class FrontendController extends Controller
@@ -20,6 +24,19 @@ class FrontendController extends Controller
     {
         $data = PageAdditionalInfo::where('key', 'contact_us')->value('value');
         return view('frontend.pages.contact_us', compact('data'));
+    }
+
+    public function master_page($category_id, $page_id)
+    {
+        $data = PageAdditionalInfo::where('page_id', $page_id)
+        ->where('key', 'content')
+        ->value('value');
+
+$category = PageCategory::find($category_id);
+$page = Page::find($page_id);
+        $SeoPage = SeoPage::find($page_id);
+
+        return view('frontend.pages.master', compact('data', 'category', 'page', 'SeoPage'));
     }
     
     public function edit_contact_us()

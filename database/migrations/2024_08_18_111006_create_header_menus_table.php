@@ -13,12 +13,10 @@ return new class extends Migration
     {
         Schema::create('header_menus', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('page_category_id');
+            $table->unsignedBigInteger('page_category_id')->unique(); // Add unique constraint here
             $table->string('isactive'); //show/hide
             $table->timestamps();
         });
-        
-        
     }
 
     /**

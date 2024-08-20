@@ -20,12 +20,14 @@ class Page extends Model
 
     public function category()
     {
-        return $this->belongsTo(PageCategory::class, 'page_category_id');
+        return $this->belongsTo(PageCategory::class, 'page_category_id', 'id');
     }
 
     public function parentCategory()
     {
-        return $this->belongsTo(PageCategory::class, 'parent_category_id');
+        // return $this->belongsTo(PageCategory::class, 'parent_category_id');
+        return $this->belongsTo(PageCategory::class, 'page_category_id', 'id');
+
     }
 
     public function childPage()

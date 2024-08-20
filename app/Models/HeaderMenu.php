@@ -8,7 +8,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class HeaderMenu extends Model
 {
-    public function category()
+    use HasFactory;
+
+    protected $fillable = ['page_category_id', 'isactive'];
+    public function page()
+    {
+        return $this->belongsTo(Page::class, 'page_category_id', 'id');
+    }
+    
+    public function pageCategory()
     {
         return $this->belongsTo(PageCategory::class, 'page_category_id');
     }

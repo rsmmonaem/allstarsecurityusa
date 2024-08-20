@@ -30,8 +30,8 @@ Footer START -->
 			<div class="col-lg-3">
 				<!-- logo -->
 				<a class="me-0" href="index-2.html">
-					<img class="light-mode-item h-40px" src="{{ asset('frontend/assets/images/logo.svg') }}" alt="logo">
-					<img class="dark-mode-item h-40px" src="{{ asset('frontend/assets/images/logo-light.svg') }}" alt="logo">
+					<img class="light-mode-item navbar-brand-item" src="{{ asset('frontend/assets/images/Assurance-Guard-Logo.jpg') }}" alt="logo">
+					<img class="dark-mode-item navbar-brand-item" src="{{ asset('frontend/assets/images/Assurance-Guard-Logo-dark.png')}}" alt="logo">
 				</a>
 
 				<p class="mt-4 mb-2">A Bootstrap theme that's both stylish and functional, perfect for any type of technology or corporate website.</p>

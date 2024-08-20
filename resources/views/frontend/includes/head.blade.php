@@ -78,6 +78,8 @@
 <!-- Plugins CSS -->
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/vendor/font-awesome/css/all.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/vendor/swiper/swiper-bundle.min.css')}}">
+
 
 <!-- Theme CSS -->
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/style.css')}}">

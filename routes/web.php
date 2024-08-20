@@ -37,6 +37,7 @@ Route::post('/login', [AuthController::class, 'loginProcess'])->name('loginProce
 Route::get('/register', [AuthController::class, 'signUp'])->name('register');
 Route::post('/register', [AuthController::class, 'signUpProcess'])->name('registerProcess');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/{category_id}/{page_id}', [FrontendController::class, 'master_page'])->name('page.master');
 
 
 // Super Admin Routes

@@ -20,7 +20,7 @@
                 @foreach ($headerMenus as $headerMenu)
                     <tr>
                         <td>{{ $headerMenu->id }}</td>
-                        <td>{{ $headerMenu->pageCategory->name }}</td>
+                        <td>{{ $headerMenu->PageCategory->name }}</td>
                         <td>{{ $headerMenu->isactive }}</td>
                         <td>
                             <a href="{{ route('header-menus.edit', $headerMenu->id) }}" class="btn btn-warning btn-sm">Edit</a>
