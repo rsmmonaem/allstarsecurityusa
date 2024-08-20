@@ -1,0 +1,29 @@
+name: Deploy Laravel Application
+
+on:
+  push:
+    branches: [ "dev" ]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: List files for debugging
+      run: ls -la
+      shell: bash
+
+    - name: Setup FTP deployment
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+
+        server: ftp.betikromfashion.com
+        username: rsmmonaem@allstarsecurityusa.betikromfashion.com
+        password: Monaem66@@##11
+        local-dir: ./
+        server-dir: /
+        exclude: .gitignore
