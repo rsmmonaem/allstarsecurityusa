@@ -12,33 +12,40 @@
 	<nav class="navbar navbar-expand-xl">
 		<div class="container">
 			<!-- Logo START -->
-			<a class="navbar-brand me-0" href="index-2.html">
+			<a class="navbar-brand me-0" href="{{ route('home') }}">
 				<img class="light-mode-item navbar-brand-item" src="{{ asset('frontend/assets/images/Assurance-Guard-Logo.jpg') }}" alt="logo">
 				<img class="dark-mode-item navbar-brand-item" src="{{ asset('frontend/assets/images/Assurance-Guard-Logo-dark.png')}}" alt="logo">
 			</a>
 			<!-- Logo END -->
 
 			<!-- Main navbar START -->
-			<div class="navbar-collapse collapse" id="navbarCollapse">
-				<ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
-					@foreach ($categories as $category)
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle {{ Request::route('category_id') == $category->id ? 'active' : '' }}" href="#" id="navbarDropdown{{ $category->id }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								{{ $category->name }}
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ $category->id }}">
-								@foreach ($category->pages as $page)
-									<li>
-										<a class="dropdown-item {{ Request::route('page_id') == $page->id ? 'active' : '' }}" href="{{ route('page.master', ['category_id' => $category->id, 'page_id' => $page->id]) }}">
-											{{ $page->name }}
-										</a>
-									</li>
-								@endforeach
-							</ul>
-						</li>
-					@endforeach
-				</ul>
-			</div>
+<div class="navbar-collapse collapse" id="navbarCollapse">
+    <ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
+        @foreach ($categories as $category)
+            <li class="nav-item dropdown">
+                <a class="nav-link @if($category->pages->count() > 1) dropdown-toggle @endif {{ Request::route('category_id') == $category->id ? 'active' : '' }}" href="{{ route('page.master', ['category_id' => $category->id, 'page_id' => $category->pages->first()->id ?? null]) }}" id="navbarDropdown{{ $category->id }}" 
+					@if($category->pages->count() > 1)	
+					role="button" data-bs-toggle="dropdown" aria-expanded="false"
+					@endif
+					>
+                    {{ $category->name }}
+                </a>
+                @if($category->pages->count() > 1)
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ $category->id }}">
+                        @foreach ($category->pages as $page)
+                            <li>
+                                <a class="dropdown-item {{ Request::route('page_id') == $page->id ? 'active' : '' }}" href="{{ route('page.master', ['category_id' => $category->id, 'page_id' => $page->id]) }}">
+                                    {{ $page->name }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
+            </li>
+        @endforeach
+    </ul>
+</div>
+
 			<!-- Main navbar END -->
 
 
@@ -90,17 +97,24 @@
 				<!-- Sign up button -->
 
 				@if(auth()->check())
-					<li class="nav-item me-2"></li>
-						<a href="{{ route('logout') }}" class="btn btn-sm btn-light mb-0"><i class="bi bi-box-arrow-in-right me-1"></i>Logout</a>
-					</li>
-					<li class="nav-item d-none d-sm-block">
-						<a href="{{ route('super-admin') }}" class="btn btn-sm btn-light mb-0"><i class="bi bi-person-circle me-1"></i>Dashboard</a>
-					</li>
-					@else
-					<li class="nav-item me-2">
-						<a href="{{ route('login') }}" class="btn btn-sm btn-light mb-0"><i class="bi bi-person-circle me-1"></i>Sign in</a>
-					</li>
-				@endif
+				<li class="nav-item me-2">
+					<a href="{{ route('logout') }}" class="btn btn-sm btn-light mb-0">
+						<i class="bi bi-box-arrow-in-right me-1"></i>Logout
+					</a>
+				</li>
+				<li class="nav-item d-none d-sm-block ms-2"> <!-- Added ms-2 for spacing -->
+					<a href="{{ route('super-admin') }}" class="btn btn-sm btn-light mb-0">
+						<i class="bi bi-person-circle me-1"></i>Dashboard
+					</a>
+				</li>
+			@else
+				<li class="nav-item me-2">
+					<a href="{{ route('login') }}" class="btn btn-sm btn-light mb-0">
+						<i class="bi bi-person-circle me-1"></i>Sign in</a>
+					</a>
+				</li>
+			@endif
+			
 
 				<!-- Responsive navbar toggler -->
 				<li class="nav-item">

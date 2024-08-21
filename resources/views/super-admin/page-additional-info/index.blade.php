@@ -14,7 +14,7 @@
                     <th>Page</th>
                     <th>Key Type</th>
                     <th>Key</th>
-                    <th>Value</th>
+                    {{-- <th>Value</th> --}}
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -25,7 +25,7 @@
                         <td>{{ $info->page->name }}</td>
                         <td>{{ $info->key_type }}</td>
                         <td>{{ $info->key }}</td>
-                        <td>{{ $info->value }}</td>
+                        {{-- <td>{{ $info->value }}</td> --}}
                         <td>
                             <a href="{{ route('page-additional-info.edit', $info->id) }}" class="btn btn-warning btn-sm">Edit</a>
                             <form action="{{ route('page-additional-info.destroy', $info->id) }}" method="POST" style="display:inline;">

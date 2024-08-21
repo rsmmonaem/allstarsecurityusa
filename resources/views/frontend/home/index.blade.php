@@ -78,7 +78,7 @@ Main Banner END -->
 
 <!-- =======================
 About START -->
-<section class="pt-0">
+{{-- <section class="pt-0">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-11 mx-auto">
@@ -105,186 +105,7 @@ About START -->
 			</div>
 		</div>
 	</div>
-</section>
-<!-- =======================
-About END -->
-
-<!-- =======================
-Services START -->
-<section class="bg-light overflow-hidden">
-	<div class="container">
-		<!-- Title and content -->
-		<div class="row mb-4 mb-md-6">
-			<div class="col-md-6 col-lg-5">
-				<h2 class="mb-0">Accelerating your digital transformation</h2>
-			</div>
-
-			<div class="col-md-6 col-lg-4 ms-auto">
-				<p>Our team of experts specializes in delivering tailored services designed to propel your organization forward in today's fast-paced digital landscape. </p>
-
-				<!-- Slider arrow -->
-				<div class="d-flex gap-3 position-relative mt-3">
-					<a href="#" class="btn btn-white border btn-icon rounded-circle mb-0 swiper-button-prev-team"><i class="bi bi-arrow-left"></i></a>
-					<a href="#" class="btn btn-white border btn-icon rounded-circle mb-0 swiper-button-next-team"><i class="bi bi-arrow-right"></i></a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Service start -->
-		<div class="swiper swiper-outside-end-n20" data-swiper-options='{
-			"spaceBetween": 50,
-			"loop": false,
-			"navigation":{
-				"nextEl":".swiper-button-next-team",
-				"prevEl":".swiper-button-prev-team"
-			},
-			"breakpoints": { 
-				"576": {"slidesPerView": 1},
-				"768": {"slidesPerView": 3},
-				"992": {"slidesPerView": 3},
-				"1200": {"slidesPerView": 4}
-			}}'>
-			
-			<div class="swiper-wrapper">
-
-				<!-- Service item -->
-				<div class="swiper-slide">
-					<div class="card card-img-scale bg-body overflow-hidden">
-						<!-- Image -->
-						<div class="card-img-scale-wrapper">
-							<img src="{{ asset('frontend/assets/images/services/4by3/01.jpg') }}" class="card-img-top img-scale" alt="service image">
-						</div>
-						<!-- Card body -->
-						<div class="card-body p-4">
-							<h6><a href="service-single.html">Custom Software Development</a></h6>
-							<p class="mb-0">We prioritize user experience, scalability, and security to ensure your.</p>
-						</div>
-						<!-- Card footer -->
-						<div class="card-footer border-top bg-body p-4">
-							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
-						</div>
-					</div>
-				</div>
-
-				<!-- Service item -->
-				<div class="swiper-slide">
-					<div class="card card-img-scale bg-body overflow-hidden">
-						<!-- Image -->
-						<div class="card-img-scale-wrapper">
-							<img src="{{ asset('frontend/assets/images/services/4by3/02.jpg') }}" class="card-img-top img-scale" alt="service image">
-						</div>
-						<!-- Card body -->
-						<div class="card-body p-4">
-							<h6><a href="service-single.html">Web Design and Development</a></h6>
-							<p class="mb-0">From responsive websites to e-commerce platforms.</p>
-						</div>
-						<!-- Card footer -->
-						<div class="card-footer border-top bg-body p-4">
-							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
-						</div>
-					</div>
-				</div>
-
-				<!-- Service item -->
-				<div class="swiper-slide">
-					<div class="card card-img-scale bg-body overflow-hidden">
-						<!-- Image -->
-						<div class="card-img-scale-wrapper">
-							<img src="{{ asset('frontend/assets/images/services/4by3/03.jpg') }}" class="card-img-top img-scale" alt="service image">
-						</div>
-						<!-- Card body -->
-						<div class="card-body p-4">
-							<h6><a href="service-single.html">Digital Marketing Strategies</a></h6>
-							<p class="mb-0">Reach your target drive results with our comprehensive digital marketing.</p>
-						</div>
-						<!-- Card footer -->
-						<div class="card-footer border-top bg-body p-4">
-							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
-						</div>
-					</div>
-				</div>
-
-				<!-- Service item -->
-				<div class="swiper-slide">
-					<div class="card card-img-scale bg-body overflow-hidden">
-						<!-- Image -->
-						<div class="card-img-scale-wrapper">
-							<img src="{{ asset('frontend/assets/images/services/4by3/04.jpg') }}" class="card-img-top img-scale" alt="service image">
-						</div>
-						<!-- Card body -->
-						<div class="card-body p-4">
-							<h6><a href="service-single.html">Cybersecurity Solutions</a></h6>
-							<p class="mb-0">Protect your business from cyber threats with our cybersecurity solutions.</p>
-						</div>
-						<!-- Card footer -->
-						<div class="card-footer border-top bg-body p-4">
-							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
-						</div>
-					</div>
-				</div>
-
-				<!-- Service item -->
-				<div class="swiper-slide">
-					<div class="card card-img-scale bg-body overflow-hidden">
-						<!-- Image -->
-						<div class="card-img-scale-wrapper">
-							<img src="{{ asset('frontend/assets/images/services/4by3/05.jpg') }}" class="card-img-top img-scale" alt="service image">
-						</div>
-						<!-- Card body -->
-						<div class="card-body p-4">
-							<h6><a href="service-single.html">IT Consulting and Support</a></h6>
-							<p class="mb-0">Leverage our expertise to optimize your IT infrastructure and operations.</p>
-						</div>
-						<!-- Card footer -->
-						<div class="card-footer border-top bg-body p-4">
-							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
-						</div>
-					</div>
-				</div>
-
-				<!-- Service item -->
-				<div class="swiper-slide">
-					<div class="card card-img-scale bg-body overflow-hidden">
-						<!-- Image -->
-						<div class="card-img-scale-wrapper">
-							<img src="{{ asset('frontend/assets/images/services/4by3/06.jpg') }}" class="card-img-top img-scale" alt="service image">
-						</div>
-						<!-- Card body -->
-						<div class="card-body p-4">
-							<h6><a href="service-single.html">UI/UX Design Services</a></h6>
-							<p class="mb-0">Enhance user satisfaction and engagement with our services.</p>
-						</div>
-						<!-- Card footer -->
-						<div class="card-footer border-top bg-body p-4">
-							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Service END -->
-
-		<!-- CTA -->
-		<div class="d-flex align-items-center gap-2 mt-6">
-			<ul class="avatar-group mb-0">
-				<li class="avatar avatar-sm">
-					<img class="avatar-img rounded-circle" src="{{ asset('frontend/assets/images/avatar/06.jpg') }}" alt="avatar">
-				</li>
-				<li class="avatar avatar-sm">
-					<img class="avatar-img rounded-circle" src="{{ asset('frontend/assets/images/avatar/05.jpg') }}" alt="avatar">
-				</li>
-				<li class="avatar avatar-sm">
-					<div class="avatar-img rounded-circle text-bg-dark">
-						<i class="bi bi-telephone text-white position-absolute top-50 start-50 translate-middle"></i>
-					</div>
-				</li>
-			</ul>
-			<p class="fw-normal mb-0">Maximize Productivity by Simplifying Solution Search <a href="#" class="text-decoration-underline text-primary-hover fw-semibold">Got a project in mind?</a></p>
-		</div>
-	</div>
-</section>
-<!-- =======================
-Services END -->
+</section> --}}
 
 <!-- =======================
 Why us START -->
@@ -413,6 +234,171 @@ Why us END -->
 
 <!-- =======================
 Work START -->
+<!-- =======================
+About END -->
+
+<!-- =======================
+Services START -->
+<section class="bg-light overflow-hidden">
+	<div class="container">
+		<!-- Title and content -->
+		<div class="row mb-4 mb-md-6">
+			<div class="col-md-6 col-lg-5">
+				<h2 class="mb-0">Redefining Security Needs				</h2>
+			</div>
+
+			<div class="col-md-6 col-lg-4 ms-auto">
+				<p>Our team of experts specializes in delivering tailored services designed to propel your organization forward in today's fast-paced digital landscape. </p>
+
+				<!-- Slider arrow -->
+				<div class="d-flex gap-3 position-relative mt-3">
+					<a href="#" class="btn btn-white border btn-icon rounded-circle mb-0 swiper-button-prev-team"><i class="bi bi-arrow-left"></i></a>
+					<a href="#" class="btn btn-white border btn-icon rounded-circle mb-0 swiper-button-next-team"><i class="bi bi-arrow-right"></i></a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Service start -->
+		<div class="swiper swiper-outside-end-n20" data-swiper-options='{
+			"spaceBetween": 50,
+			"loop": false,
+			"navigation":{
+				"nextEl":".swiper-button-next-team",
+				"prevEl":".swiper-button-prev-team"
+			},
+			"breakpoints": { 
+				"576": {"slidesPerView": 1},
+				"768": {"slidesPerView": 3},
+				"992": {"slidesPerView": 3},
+				"1200": {"slidesPerView": 4}
+			}}'>
+			
+			<div class="swiper-wrapper">
+
+				<!-- Service item -->
+				<div class="swiper-slide">
+					<div class="card card-img-scale bg-body overflow-hidden">
+						<!-- Image -->
+						<div class="card-img-scale-wrapper">
+							<img src="{{ asset('frontend/assets/images/services/4by3/Unarmed-Security.jpg') }}" class="card-img-top img-scale" alt="service image">
+						</div>
+						<!-- Card body -->
+						<div class="card-body p-4">
+							<h6><a href="service-single.html">Armed/Unarmed Security							</a></h6>
+							<p class="mb-0">WThe Uniformed Security Guard Division was created to address your particular security requirements. The guards are on call 24 hours a day..</p>
+						</div>
+						<!-- Card footer -->
+						<div class="card-footer border-top bg-body p-4">
+							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Service item -->
+				<div class="swiper-slide">
+					<div class="card card-img-scale bg-body overflow-hidden">
+						<!-- Image -->
+						<div class="card-img-scale-wrapper">
+							<img src="{{ asset('frontend/assets/images/services/4by3/Residential-Security.jpg') }}" class="card-img-top img-scale" alt="service image">
+						</div>
+						<!-- Card body -->
+						<div class="card-body p-4">
+							<h6><a href="service-single.html">Residential Security
+							</a></h6>
+							<p class="mb-0">One important key factor for home buyers or renters is residential property security and safety. Everyone wants to live secure.</p>
+						</div>
+						<!-- Card footer -->
+						<div class="card-footer border-top bg-body p-4">
+							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Service item -->
+				<div class="swiper-slide">
+					<div class="card card-img-scale bg-body overflow-hidden">
+						<!-- Image -->
+						<div class="card-img-scale-wrapper">
+							<img src="{{ asset('frontend/assets/images/services/4by3/Dispatch-Support.jpg') }}" class="card-img-top img-scale" alt="service image">
+						</div>
+						<!-- Card body -->
+						<div class="card-body p-4">
+							<h6><a href="service-single.html">24/7 Dispatch Support
+							</a></h6>
+							<p class="mb-0">Dispatch teams are active 24 hours a day, 7 days a week, allowing contact with personnel regarding schedule changes or any issues that may arise.</p>
+						</div>
+						<!-- Card footer -->
+						<div class="card-footer border-top bg-body p-4">
+							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Service item -->
+				<div class="swiper-slide">
+					<div class="card card-img-scale bg-body overflow-hidden">
+						<!-- Image -->
+						<div class="card-img-scale-wrapper">
+							<img src="{{ asset('frontend/assets/images/services/4by3/04.jpg') }}" class="card-img-top img-scale" alt="service image">
+						</div>
+						<!-- Card body -->
+						<div class="card-body p-4">
+							<h6><a href="service-single.html">Cybersecurity Solutions</a></h6>
+							<p class="mb-0">Protect your business from cyber threats with our cybersecurity solutions.</p>
+						</div>
+						<!-- Card footer -->
+						<div class="card-footer border-top bg-body p-4">
+							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Service item -->
+				<div class="swiper-slide">
+					<div class="card card-img-scale bg-body overflow-hidden">
+						<!-- Image -->
+						<div class="card-img-scale-wrapper">
+							<img src="{{ asset('frontend/assets/images/services/4by3/05.jpg') }}" class="card-img-top img-scale" alt="service image">
+						</div>
+						<!-- Card body -->
+						<div class="card-body p-4">
+							<h6><a href="service-single.html">IT Consulting and Support</a></h6>
+							<p class="mb-0">Leverage our expertise to optimize your IT infrastructure and operations.</p>
+						</div>
+						<!-- Card footer -->
+						<div class="card-footer border-top bg-body p-4">
+							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Service item -->
+				<div class="swiper-slide">
+					<div class="card card-img-scale bg-body overflow-hidden">
+						<!-- Image -->
+						<div class="card-img-scale-wrapper">
+							<img src="{{ asset('frontend/assets/images/services/4by3/06.jpg') }}" class="card-img-top img-scale" alt="service image">
+						</div>
+						<!-- Card body -->
+						<div class="card-body p-4">
+							<h6><a href="service-single.html">UI/UX Design Services</a></h6>
+							<p class="mb-0">Enhance user satisfaction and engagement with our services.</p>
+						</div>
+						<!-- Card footer -->
+						<div class="card-footer border-top bg-body p-4">
+							<a class="icon-link icon-link-hover stretched-link p-0 m-0" href="#">Explore this service<i class="bi bi-arrow-right"></i> </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Service END -->
+	</div>
+</section>
+<!-- =======================
+Services END -->
+
+
 <section>
 	<div class="container">
 		<!-- Title -->
@@ -428,8 +414,8 @@ Work START -->
 					<div class="icon-lg bg-dark text-white rounded-circle mb-3 mx-auto">
 						<i class="bi bi-search fa-lg"></i>
 					</div>
-					<h5>Discovery and Consultation</h5>
-					<p>We begin by getting to know your unique requirements, goals, and challenges. </p>
+					<h5>We Listen</h5>
+					<p>We listen to our clients. Sounds simple, but time after time, we meet new Clients whose old security company never listened to their needs, to their staff members, nor to the security needs of the guards. At All Star Security, we learn your needs from A to Z and what matters to your security success. </p>
 				</div>
 			</div>
 
@@ -440,8 +426,8 @@ Work START -->
 					<div class="icon-lg bg-dark text-white rounded-circle mb-3 mx-auto">
 						<i class="bi bi-bullseye fa-lg"></i>
 					</div>
-					<h5>Planning and Strategy</h5>
-					<p>We define project milestones and deliverables to keep the process on track.</p>
+					<h5>We Train</h5>
+					<p>We understands the importance of effective security guard training in order to meet and execute the needs of our clients and to better our officers in their professional career, as well as the continually rising demands of Homeland Security initiatives. All Star’s Security training program is designed to allow each security officer the opportunity for a clear road to success.</p>
 				</div>
 			</div>
 
@@ -452,8 +438,8 @@ Work START -->
 					<div class="icon-lg bg-dark text-white rounded-circle mb-3 mx-auto">
 						<i class="bi bi-rocket-takeoff fa-lg"></i>
 					</div>
-					<h5>Deployment and Launch</h5>
-					<p>We ensure a smooth transition to the live, providing support every step of the way.</p>
+					<h5>We Measure </h5>
+					<p>If it’s worth doing, it’s worth measuring. We are committed to meaningful quality data measurements. Our performance metrics are based on.</p>
 				</div>
 			</div>
 
@@ -464,8 +450,8 @@ Work START -->
 					<div class="icon-lg bg-dark text-white rounded-circle mb-3 mx-auto">
 						<i class="bi bi-headset fa-lg"></i>
 					</div>
-					<h5>Support and Maintenance</h5>
-					<p>We offer ongoing support and maintenance services to keep your software running.</p>
+					<h5> We Verify </h5>
+					<p>All Star Security monitors performance. Performance data is one of many powerful powerful tools we use to ensure we are executing at peak performance.</p>
 				</div>
 			</div>
 		</div>
@@ -731,7 +717,7 @@ Testimonials END -->
 
 <!-- =======================
 CTA START -->
-<section class="position-relative z-index-2 pt-0">
+{{-- <section class="position-relative z-index-2 pt-0">
 	<div class="container position-relative">
 		<div class="bg-dark rounded position-relative overflow-hidden p-4 p-sm-6"style="background:url({{ asset('frontend/assets/images/bg/15.jpg') }}) no-repeat; background-size:cover; background-position:center;">
 			<div class="row align-items-center position-relative">
@@ -749,7 +735,7 @@ CTA START -->
 			</div>
 		</div>
 	</div>
-</section>
+</section> --}}
 <!-- =======================
 CTA END -->
 

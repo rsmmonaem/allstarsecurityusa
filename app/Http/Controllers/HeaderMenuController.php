@@ -14,8 +14,8 @@ class HeaderMenuController extends Controller
     public function index()
     {
         $headerMenus = HeaderMenu::with(['page', 'pageCategory'])->get();
-        return $headerMenus;
-        //return view('super-admin.header-menus.index', compact('headerMenus'));
+        //return $headerMenus;
+        return view('super-admin.header-menus.index', compact('headerMenus'));
     }
 
     public function create()

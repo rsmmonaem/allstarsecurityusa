@@ -125,7 +125,11 @@
 
 </Section>
 @else
-{!! $data !!}
+
+
+				{!! $data !!}
+
+
 
 @endif
 

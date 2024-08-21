@@ -37,7 +37,6 @@ Route::post('/login', [AuthController::class, 'loginProcess'])->name('loginProce
 Route::get('/register', [AuthController::class, 'signUp'])->name('register');
 Route::post('/register', [AuthController::class, 'signUpProcess'])->name('registerProcess');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-Route::get('/{category_id}/{page_id}', [FrontendController::class, 'master_page'])->name('page.master');
 
 
 // Super Admin Routes
@@ -75,3 +74,4 @@ Route::resource('seo-pages', SeoPageController::class);
 Route::resource('header-menus', HeaderMenuController::class);
 Route::resource('media', MediaController::class);
 Route::resource('page-categories', PageCategoryController::class);
+Route::get('/{category_id}/{page_id}', [FrontendController::class, 'master_page'])->name('page.master');
