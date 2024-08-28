@@ -200,9 +200,9 @@ Why us START -->
 			<!-- Content -->
 			<div class="col-lg-6 ms-auto">
 				<!-- Title and content -->
-				<h2 class="mb-lg-4">Choose us for your digital journey</h2>
+				<h2 class="mb-lg-4">Choose us for your digital Secqurity</h2>
 				<p class="mb-lg-4">Our commitment to excellence, expertise in cutting-edge technologies, and dedication to client.</p>
-				<a href="portfolio-list.html" class="btn btn-dark mb-0">Explore our projects</a>
+				<a href="#" class="btn btn-dark mb-0">Explore our projects</a>
 				<hr class="my-4 my-lg-5"> <!-- Divider -->
 
 				<!-- List -->
@@ -239,7 +239,7 @@ About END -->
 
 <!-- =======================
 Services START -->
-<section class="bg-light overflow-hidden">
+{{-- <section class="bg-light overflow-hidden">
 	<div class="container">
 		<!-- Title and content -->
 		<div class="row mb-4 mb-md-6">
@@ -284,7 +284,7 @@ Services START -->
 						</div>
 						<!-- Card body -->
 						<div class="card-body p-4">
-							<h6><a href="service-single.html">Armed/Unarmed Security							</a></h6>
+							<h6><a href="#">Armed/Unarmed Security							</a></h6>
 							<p class="mb-0">WThe Uniformed Security Guard Division was created to address your particular security requirements. The guards are on call 24 hours a day..</p>
 						</div>
 						<!-- Card footer -->
@@ -303,7 +303,7 @@ Services START -->
 						</div>
 						<!-- Card body -->
 						<div class="card-body p-4">
-							<h6><a href="service-single.html">Residential Security
+							<h6><a href="#">Residential Security
 							</a></h6>
 							<p class="mb-0">One important key factor for home buyers or renters is residential property security and safety. Everyone wants to live secure.</p>
 						</div>
@@ -323,7 +323,7 @@ Services START -->
 						</div>
 						<!-- Card body -->
 						<div class="card-body p-4">
-							<h6><a href="service-single.html">24/7 Dispatch Support
+							<h6><a href="#">24/7 Dispatch Support
 							</a></h6>
 							<p class="mb-0">Dispatch teams are active 24 hours a day, 7 days a week, allowing contact with personnel regarding schedule changes or any issues that may arise.</p>
 						</div>
@@ -343,7 +343,7 @@ Services START -->
 						</div>
 						<!-- Card body -->
 						<div class="card-body p-4">
-							<h6><a href="service-single.html">Cybersecurity Solutions</a></h6>
+							<h6><a href="#">Cybersecurity Solutions</a></h6>
 							<p class="mb-0">Protect your business from cyber threats with our cybersecurity solutions.</p>
 						</div>
 						<!-- Card footer -->
@@ -362,7 +362,7 @@ Services START -->
 						</div>
 						<!-- Card body -->
 						<div class="card-body p-4">
-							<h6><a href="service-single.html">IT Consulting and Support</a></h6>
+							<h6><a href="#">IT Consulting and Support</a></h6>
 							<p class="mb-0">Leverage our expertise to optimize your IT infrastructure and operations.</p>
 						</div>
 						<!-- Card footer -->
@@ -381,7 +381,7 @@ Services START -->
 						</div>
 						<!-- Card body -->
 						<div class="card-body p-4">
-							<h6><a href="service-single.html">UI/UX Design Services</a></h6>
+							<h6><a href="#">UI/UX Design Services</a></h6>
 							<p class="mb-0">Enhance user satisfaction and engagement with our services.</p>
 						</div>
 						<!-- Card footer -->
@@ -394,7 +394,7 @@ Services START -->
 		</div>
 		<!-- Service END -->
 	</div>
-</section>
+</section> --}}
 <!-- =======================
 Services END -->
 
@@ -479,7 +479,7 @@ Latest projects START -->
 				<h2 class="mb-0">Our latest projects</h2>
 			</div>
 			<div class="col-md-6 col-lg-4 ms-auto text-md-end">
-				<a href="portfolio-showcase.html" class="btn btn-lg btn-dark mb-0">View all projects</a>
+				<a href="#" class="btn btn-lg btn-dark mb-0">View all projects</a>
 			</div>
 		</div>
 
@@ -494,7 +494,7 @@ Latest projects START -->
 					<!-- Card body -->
 					<div class="card-body d-flex justify-content-between align-items-center px-0 pb-0">
 						<div class="me-3">
-							<h5 class="mb-0"><a href="portfolio-case-studies-v2.html" class="heading-color stretched-link">Website optimization for techWave</a></h5>
+							<h5 class="mb-0"><a href="#" class="heading-color stretched-link">Website optimization for techWave</a></h5>
 							<small>Graphic design</small>
 						</div>
 						<a href="#" class="btn btn-round btn-dark flex-shrink-0"><i class="bi bi-arrow-up-right"></i></a>
@@ -511,7 +511,7 @@ Latest projects START -->
 					<!-- Card body -->
 					<div class="card-body d-flex justify-content-between align-items-center px-0 pb-0">
 						<div class="me-3">
-							<h5 class="mb-0"><a href="portfolio-case-studies-v2.html" class="heading-color stretched-link">Transforming ideas into reality</a></h5>
+							<h5 class="mb-0"><a href="#" class="heading-color stretched-link">Transforming ideas into reality</a></h5>
 						<small>UI/UX design</small>
 						</div>
 						<a href="#" class="btn btn-round btn-dark flex-shrink-0"><i class="bi bi-arrow-up-right"></i></a>
@@ -777,7 +777,7 @@ Blog START -->
 						<!-- Card body -->
 						<div class="card-body d-flex flex-column px-2">
 							<div class="small mb-3"><i class="bi bi-calendar me-1"></i>April 15, 2024</div>
-							<h6 class="card-title mb-3"><a href="blog-single-v2.html" class="stretched-link">Sleek and Responsive - Designing with Bootstrap and Mizzle</a></h6>
+							<h6 class="card-title mb-3"><a href="#" class="stretched-link">Sleek and Responsive - Designing with Bootstrap and Mizzle</a></h6>
 							<!-- Author info and button -->
 							<div class="d-flex justify-content-between align-items-center mt-auto">
 								<!-- Author -->
@@ -807,7 +807,7 @@ Blog START -->
 						<!-- Card body -->
 						<div class="card-body d-flex flex-column px-2">
 							<div class="small mb-3"><i class="bi bi-calendar me-1"></i>April 12, 2024</div>
-							<h6 class="card-title mb-3"><a href="blog-single-v2.html" class="stretched-link">Mastering HTML Website Templates - Unleash Your Creativity with Bootstrap</a></h6>
+							<h6 class="card-title mb-3"><a href="#" class="stretched-link">Mastering HTML Website Templates - Unleash Your Creativity with Bootstrap</a></h6>
 							<!-- Author info and button -->
 							<div class="d-flex justify-content-between align-items-center mt-auto">
 								<!-- Author -->

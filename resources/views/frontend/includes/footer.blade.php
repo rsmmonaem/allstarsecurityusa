@@ -29,7 +29,7 @@ Footer START -->
 			<!-- Widget 1 START -->
 			<div class="col-lg-3">
 				<!-- logo -->
-				<a class="me-0" href="index-2.html">
+				<a class="me-0" href="#">
 					<img class="light-mode-item navbar-brand-item" src="{{ asset('frontend/assets/images/Assurance-Guard-Logo.jpg') }}" alt="logo">
 					<img class="dark-mode-item navbar-brand-item" src="{{ asset('frontend/assets/images/Assurance-Guard-Logo-dark.png')}}" alt="logo">
 				</a>
@@ -45,13 +45,13 @@ Footer START -->
 					<div class="col-6 col-md-4">
 						<h6 class="mb-2 mb-md-4">Quick links</h6>
 						<ul class="nav flex-column">
-							<li class="nav-item"><a class="nav-link pt-0" href="about-v1.html">About us</a></li>
-							<li class="nav-item"><a class="nav-link" href="contact-v1.html">Contact us</a></li>
-							<li class="nav-item"><a class="nav-link" href="career.html">Career <span class="badge text-bg-danger ms-2">2 Job</span></a></li>
-							<li class="nav-item"><a class="nav-link" href="career-single.html">Career detail</a></li>
-							<li class="nav-item"><a class="nav-link" href="contact-v1.html">Become a partner</a></li>
-							<li class="nav-item"><a class="nav-link" href="sign-in.html">Sign in</a></li>
-							<li class="nav-item"><a class="nav-link" href="sign-up.html">Sign up</a></li>
+							<li class="nav-item"><a class="nav-link pt-0" href="#">About us</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Career <span class="badge text-bg-danger ms-2">2 Job</span></a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Career detail</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Become a partner</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Sign in</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Sign up</a></li>
 						</ul>
 					</div>
 
@@ -61,9 +61,9 @@ Footer START -->
 						<ul class="nav flex-column">
 							<li class="nav-item"><a class="nav-link pt-0" href="#">Documents</a></li>
 							<li class="nav-item"><a class="nav-link" href="#">Supports <i class="bi bi-box-arrow-up-right small ms-1"></i></a></li>
-							<li class="nav-item"><a class="nav-link" href="faq.html">Faqs</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Faqs</a></li>
 							<li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
-							<li class="nav-item"><a class="nav-link" href="blog-grid.html">News and blogs</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">News and blogs</a></li>
 							<li class="nav-item"><a class="nav-link" href="#">Terms & condition</a></li>
 						</ul>
 					</div>
