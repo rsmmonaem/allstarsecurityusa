@@ -6,7 +6,7 @@
 <meta name="author" content="Webestica.com">
 <meta name="description" content="@yield('description')">
 <meta name="keywords" content="@yield('keywords')">
-
+<meta name="author" content="Rsm Monaem">
 <!-- Dark mode -->
 <script>
     const storedTheme = localStorage.getItem('theme')
