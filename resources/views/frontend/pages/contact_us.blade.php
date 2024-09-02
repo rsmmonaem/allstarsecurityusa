@@ -138,29 +138,30 @@
 								<p class="mb-0">You can reach us anytime via <a href="#">example@gmail.com</a></p>
 							</div>
 							<!-- Card body & form -->
-							<form class="card-body px-0 pb-0 pt-5">
+							<form class="card-body px-0 pb-0 pt-5" action="{{ route('contact-us.store') }}" method="post">
+								@csrf
 								<!-- Name -->
 								<div class="input-floating-label form-floating mb-4">
-									<input type="text" class="form-control bg-transparent" id="floatingName" placeholder="Password">
+									<input type="text" name="name" class="form-control bg-transparent" id="floatingName" placeholder="Password">
 									<label for="floatingName">Your name</label>
 								</div>
 								<!-- Email -->
 								<div class="input-floating-label form-floating mb-4">
-									<input type="email" class="form-control bg-transparent" id="floatingInput" placeholder="name@example.com">
+									<input type="email" name="email" class="form-control bg-transparent" id="floatingInput" placeholder="name@example.com">
 									<label for="floatingInput">Email address</label>
 								</div>
 								<!-- Number -->
 								<div class="input-floating-label form-floating mb-4">
-									<input type="text" class="form-control bg-transparent" id="floatingNumber" placeholder="Password">
+									<input type="text" name="phone" class="form-control bg-transparent" id="floatingNumber" placeholder="Password">
 									<label for="floatingNumber">Phone number</label>
 								</div>
 								<!-- Message -->
 								<div class="input-floating-label form-floating mb-4">
-									<textarea class="form-control bg-transparent" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+									<textarea class="form-control bg-transparent" name="message" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
 									<label for="floatingTextarea2">Message</label>
 								</div>
 								<!-- Button -->
-								<button class="btn btn-lg btn-primary mb-0">Send a message</button>
+								<button type="submit" class="btn btn-lg btn-primary mb-0">Send a message</button>
 							</form>
 						</div>
 					</div>
@@ -188,7 +189,7 @@
 						</div>
 						<span class="heading-color fw-semibold mb-0">US office:</span>
 					</div>
-					<address class="mb-0">1421 Coburn Hollow Road Metamora, Near Center Point, IL 61548.</address>
+					<address class="mb-0">12560 Colony Preserve Dr Boynton Beach , Fl , 33436-5818</address>
 				</div>
 			</div>
 
@@ -212,7 +213,7 @@
 					<!-- Title -->
 					<h6 class="mb-3">Call us</h6>
 					<p>Let's work together towards a common goal - get in touch!</p>
-					<a href="#" class="heading-color text-primary-hover text-decoration-underline mb-0">(251) 854-6308</a>
+					<a href="#" class="heading-color text-primary-hover text-decoration-underline mb-0">(+1) 954 309 6333&nbsp;(+1) 561 715 7785</a>
 				</div>
 			</div>
 

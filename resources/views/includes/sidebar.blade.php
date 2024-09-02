@@ -94,6 +94,11 @@
                                 <span class="align-middle">Page Content</span>
                             </a>
                         </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('contact-us.index') }}">
+                                <span class="align-middle">Contact us </span>
+                            </a>
+                        </li>
                     {{-- </ul>
                 </li>
                  --}}

@@ -3,19 +3,20 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\MediaController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SeoPageController;
+// use App\Http\Controllers\SuperAdmin\PageController;
 use App\Http\Controllers\FrontendController;
+// use App\Http\Controllers\SuperAdmin\SeoPageController;
 use App\Http\Controllers\HeaderMenuController;
 use App\Http\Controllers\SuperAdminController;
 use App\Http\Controllers\PageCategoryController;
-// use App\Http\Controllers\SuperAdmin\PageController;
 use App\Http\Controllers\PageAdditionalInfoController;
-// use App\Http\Controllers\SuperAdmin\SeoPageController;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\SeoPageController;
-use App\Http\Controllers\MediaController;
 
 
 
@@ -75,3 +76,5 @@ Route::resource('header-menus', HeaderMenuController::class);
 Route::resource('media', MediaController::class);
 Route::resource('page-categories', PageCategoryController::class);
 Route::get('/{category_id}/{page_id}', [FrontendController::class, 'master_page'])->name('page.master');
+
+Route::resource('contact-us', ContactController::class);
