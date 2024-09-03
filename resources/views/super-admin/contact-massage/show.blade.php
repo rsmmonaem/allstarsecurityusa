@@ -1,9 +1,42 @@
 @extends('layout.app')
 
-@section('title', 'Edit Header Menu')
+@section('title', 'show message')
+
+@section('content')
+
 
 @section('content')
 <main class="content">
+    <div class="container-fluid p-0">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Message Details</h3>
+                </div>
+
+                <div class="card-body">
+                    <!-- User Info -->
+                    <div class="mb-3">
+                        <h5 class="card-title">Name: {{ $user->name }}</h5>
+                        <p class="card-text"><strong>Email:</strong> {{ $user->email }}</p>
+                        <p class="card-text"><strong>Phone:</strong> {{ $user->phone }}</p>
+                        <p class="card-text"><strong>Phone:</strong> {{ $user->message }}</p>
+                        <p class="card-text"><strong>Joined:</strong> {{ $user->created_at->format('M d, Y') }}</p>
+                    </div>
+
+
+                    <a href="{{ route('contact-us.index') }}" class="btn btn-secondary">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+@endsection
+
+
+{{-- <main class="content">
     <div class="container-fluid p-0">
         <h3>Edit Header Menu</h3>
         <form action="{{ route('header-menus.update', $headerMenu->id) }}" method="POST">
@@ -29,5 +62,5 @@
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
-</main>
+</main> --}}
 @endsection

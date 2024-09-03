@@ -10,6 +10,7 @@
 @section('keywords')
 {{ $SeoPage->keywords }}
 @endsection
+
 <br><br><br><br>
 <style>
 	#heading {
@@ -292,11 +293,13 @@
 						<!-- Avatar -->
 						<div class="avatar avatar-xxs me-2">
 							<img class="avatar-img rounded-circle"
-								src="{{ asset('frontend/assets/images/flags/us.svg')}}" alt="avatar">
+								src="{{ asset('frontend/assets/images/flags/bd.png')}}" alt="avatar">
 						</div>
-						<span class="heading-color fw-semibold mb-0">US office:</span>
+						<span class="heading-color fw-semibold mb-0">BD office:</span>
 					</div>
-					<address class="mb-0">1421 Coburn Hollow Road Metamora, Near Center Point, IL 61548.</address>
+					<address class="mb-0">12560 Colony Preserve Dr Boynton Beach,Fl,33436-5818</address>
+					<a href="#" class="heading-color text-primary-hover text-decoration-underline mb-0">(+1)
+						954 309 6333</a>
 				</div>
 			</div>
 
@@ -321,8 +324,8 @@
 					<!-- Title -->
 					<h6 class="mb-3">Call us</h6>
 					<p>Let's work together towards a common goal - get in touch!</p>
-					<a href="#" class="heading-color text-primary-hover text-decoration-underline mb-0">(251)
-						854-6308</a>
+					<a href="#" class="heading-color text-primary-hover text-decoration-underline mb-0">(+1)
+						561 715 7785</a>
 				</div>
 			</div>
 
@@ -331,9 +334,9 @@
 
 	<!-- Map -->
 	<iframe class="w-100 h-200px h-lg-400px grayscale d-block mt-8"
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076684379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sin!4v1586000412513!5m2!1sen!2sin"
+		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.9138649537804!2d-80.12890142546408!3d26.49071807809988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9205b5e326fe9%3A0xf93ec58dcba52d0!2zMTI1NjAgQ29sb255IFByZXNlcnZlIERyLCBCb3ludG9uIEJlYWNoLCBGTCAzMzQzNiwg4Kau4Ka-4Kaw4KeN4KaV4Ka_4KaoIOCmr-CngeCmleCnjeCmpOCmsOCmvuCmt-CnjeCmn-CnjeCmsA!5e0!3m2!1sbn!2sbd!4v1725353845710!5m2!1sbn!2sbd"
 		style="margin-bottom: -5px;" aria-hidden="false" tabindex="0"></iframe>
-
+		{{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.9138649537804!2d-80.12890142546408!3d26.49071807809988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9205b5e326fe9%3A0xf93ec58dcba52d0!2zMTI1NjAgQ29sb255IFByZXNlcnZlIERyLCBCb3ludG9uIEJlYWNoLCBGTCAzMzQzNiwg4Kau4Ka-4Kaw4KeN4KaV4Ka_4KaoIOCmr-CngeCmleCnjeCmpOCmsOCmvuCmt-CnjeCmn-CnjeCmsA!5e0!3m2!1sbn!2sbd!4v1725353845710!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
 </Section>
 
 @elseif ($page->slug == 'Security-Services')

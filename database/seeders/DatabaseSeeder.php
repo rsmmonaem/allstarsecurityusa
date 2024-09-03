@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             RoleTableSeeder::class,
             UserTableSeeder::class,
             CustomerSeeder::class,
+            ContactTableSeeder::class,
             // PageCategorySeeder::class,
             // PageSeeder::class,
             // SeoPageSeeder::class,

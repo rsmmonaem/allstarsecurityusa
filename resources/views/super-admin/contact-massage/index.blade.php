@@ -27,7 +27,7 @@
                         <td>{{ $contact->phone }}</td>
                         <td>{{ $contact->message }}</td>
                         <td>
-                            {{-- <a href="{{ route('header-menus.edit', $headerMenu->id) }}" class="btn btn-warning btn-sm">Edit</a> --}}
+                            <a href="{{ route('contact.show', $contact->id) }}" class="btn btn-warning btn-sm">show</a>
                             <form action="{{ route('contact-us.destroy', $contact->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')

@@ -28,14 +28,24 @@ class FrontendController extends Controller
 
     public function master_page($category_id, $page_id)
     {
+        $category_id = (int) $category_id;
+        $page_id = (int) $page_id;
+    
+        // Fetch additional info
         $data = PageAdditionalInfo::where('page_id', $page_id)
-        ->where('key', 'content')
-        ->value('value');
-
-$category = PageCategory::find($category_id);
-$page = Page::find($page_id);
+            ->where('key', 'content')
+            ->value('value');
+    
+        // Fetch category, page, and SEO page
+        $category = PageCategory::find($category_id);
+        $page = Page::find($page_id);
         $SeoPage = SeoPage::find($page_id);
-
+    
+        // Handle missing records
+        if (!$category || !$page || !$SeoPage) {
+            return redirect()->back()->with('error', 'Content not found.');
+        }
+    
         return view('frontend.pages.master', compact('data', 'category', 'page', 'SeoPage'));
     }
     

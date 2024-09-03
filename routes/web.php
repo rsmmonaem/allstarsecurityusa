@@ -17,9 +17,7 @@ use App\Http\Controllers\HeaderMenuController;
 use App\Http\Controllers\SuperAdminController;
 use App\Http\Controllers\PageCategoryController;
 use App\Http\Controllers\PageAdditionalInfoController;
-
-
-
+use Spatie\Permission\Contracts\Role;
 
 Route::get('/link', function () {
     try {
@@ -75,6 +73,7 @@ Route::resource('seo-pages', SeoPageController::class);
 Route::resource('header-menus', HeaderMenuController::class);
 Route::resource('media', MediaController::class);
 Route::resource('page-categories', PageCategoryController::class);
-Route::get('/{category_id}/{page_id}', [FrontendController::class, 'master_page'])->name('page.master');
+Route::get('page/{category_id}/{page_id}', [FrontendController::class, 'master_page'])->name('page.master');
 
 Route::resource('contact-us', ContactController::class);
+Route::get('contact_massag_show/{id}',[ContactController::class,'contact_massag_show'])->name('contact.show');
