@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ContactController extends Controller
 {
@@ -42,6 +43,8 @@ class ContactController extends Controller
         $newMassage->phone = $request->phone;
         $newMassage->message = $request->message;
         $newMassage->save();
+
+        return redirect()->back()->with('success', 'Message sent successfully!');
 
     }
 
